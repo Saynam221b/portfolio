@@ -30,7 +30,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['.vercel.app','*']
 
-WSGI_APPLICATION = 'vercel_app.wsgi.app'
+WSGI_APPLICATION = 'saynam_portfolio.wsgi.app'
+
 load_dotenv()
 # Rest of your Django settings
 load_dotenv('creds.env')
