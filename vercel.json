@@ -4,16 +4,26 @@
       {
         "src": "portfolio/wsgi.py",
         "use": "@vercel/python",
+<<<<<<< HEAD
         "config": {
           "maxLambdaSize": "15mb",
           "runtime": "python3.9"
         }
+=======
+        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+
+>>>>>>> 590dbda2efb883758414dc99ccc4dca51c800501
       },
       {
         "src": "portfolio/build_files.sh",
         "use": "@vercel/static-build",
         "config": {
           "distDir": "staticfiles_build"
+    }],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "portfolioapp/wsgi.py"
         }
       }
     ],
@@ -28,4 +38,10 @@
       }
     ]
   }
+<<<<<<< HEAD
   
+=======
+
+}
+
+>>>>>>> 590dbda2efb883758414dc99ccc4dca51c800501
