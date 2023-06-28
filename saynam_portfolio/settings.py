@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
+
+load_dotenv() 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,18 +29,29 @@ SECRET_KEY = 'django-insecure-78hvi_u7r^e-vn1r=un-2^m34xti(k*cns^bo@_77a*x-i9=pv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+print(os.getenv('EMAIL_HOST_USER'))
+print(os.getenv('EMAIL_HOST_PASSWORD'))
+
+# Rest of your Django settings
+load_dotenv('creds.env')
+username = os.getenv('EMAIL_HOST_USER')
+password = os.getenv('EMAIL_HOST_PASSWORD')
 # settings.py
 
 # Email Configuration
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'saynamsharma221b@gmail.com'  # Replace with your Gmail email address
-EMAIL_HOST_PASSWORD = 'tfmwcuafqardzief'  # Replace with your Gmail password or app password if you have 2-step verification enabled
+EMAIL_HOST_USER = username  # Replace with your Gmail email address
+EMAIL_HOST_PASSWORD = password  # Replace with your Gmail password or app password if you have 2-step verification enabled
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'saynamsharma221b@gmail.com'  # Replace with your Gmail email address
+DEFAULT_FROM_EMAIL = username  # Replace with your Gmail email address
 
 # Application definition
 
