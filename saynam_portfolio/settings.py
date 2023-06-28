@@ -28,7 +28,7 @@ SECRET_KEY = secret_key
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercil.app']
+ALLOWED_HOSTS = ['.vercil.app','*']
 
 
 load_dotenv()
@@ -139,6 +139,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, ' staticfiles_build','static')
 
 
 # Default primary key field type
