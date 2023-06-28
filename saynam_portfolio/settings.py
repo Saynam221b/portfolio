@@ -28,9 +28,9 @@ SECRET_KEY = secret_key
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercil.app','*']
+ALLOWED_HOSTS = ['.vercel.app','*']
 
-
+WSGI_APPLICATION = 'vercel_app.wsgi.app'
 load_dotenv()
 # Rest of your Django settings
 load_dotenv('creds.env')
