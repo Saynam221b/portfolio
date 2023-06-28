@@ -7,7 +7,15 @@
 "routes": [
     {
         "src": "/(.*)",
+<<<<<<< HEAD
         "dest": "portfolioapp/wsgi.py"
     }
 ]
-}
+}}
+=======
+        "dest": "portfolio/wsgi.py"
+      }
+    ]
+  }
+
+>>>>>>> 7ca1b84733855e66276d6867d2a1b7396fb0697b
