@@ -4,17 +4,24 @@
       {
         "src": "saynam_portfolio/wsgi.py",
         "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+      },
+      {
+        "src": "build_files.sh",
+        "use": "@vercel/static-build",
         "config": {
-          "maxLambdaSize": "15mb",
-          "runtime": "python3.9"
+          "distDir": "staticfiles_build"
         }
       }
     ],
-    "rewrites": [
+    "routes": [
       {
-        "source": "/(.*)",
-        "destination": "saynam_portfolio/wsgi.py"
+        "src": "/static/(.*)",
+        "dest": "/static/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "saynam_portfolio/wsgi.py"
       }
     ]
   }
-  
