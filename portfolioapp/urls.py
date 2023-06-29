@@ -3,7 +3,6 @@ from django.urls import path
 from portfolioapp import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('index', views.index, name= 'index'),
     path('projects', views.projects, name= 'projects'),
     path('experience', views.experience, name= 'experience'),
