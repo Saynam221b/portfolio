@@ -27,6 +27,6 @@ def contact_me(request):
         body = f'Name: {name}\nEmail: {email}\nMessage: {message}'
         send_mail(subject, body, settings.DEFAULT_FROM_EMAIL, [settings.DEFAULT_FROM_EMAIL])
 
-        return render(request, 'contact_success.html')
+        return render(request, 'contact.html')
 
     return render(request, 'contact.html')

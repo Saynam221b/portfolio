@@ -19,10 +19,10 @@ $(document).on('click', 'a[data-ajax-link]', function (event) {
   });
   
   function showLoadingOverlay() {
-    $('.wheel-and-hamster').show();
+    $('.loader').show();
   }
   
   function hideLoadingOverlay() {
-    $('.wheel-and-hamster').hide();
+    $('.loader').hide();
   }
   
