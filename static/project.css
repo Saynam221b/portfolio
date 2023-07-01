@@ -1,64 +1,69 @@
-.card {
-    width: 350px;
-    height: 300px;
-    padding: 0.5rem;
-    background: rgba(198, 198, 198, 0.34);
-    border-radius: 8px;
-    backdrop-filter: blur(5px);
-    border-bottom: 3px solid rgba(255, 255, 255, 0.440);
-    border-left: 2px  rgba(255, 255, 255, 0.545) outset;
-    box-shadow: -40px 50px 30px rgba(0, 0, 0, 0.280);
-    transform: skewX(10deg);
-    transition: .4s;
-    overflow: hidden;
-    color: white;
-    justify-content: space-between; 
-  }
-  
-  .card:hover {
-    height: 254px;
-    transform: skew(0deg);
-  }
-  
-  .align {
-    padding: 1rem;
+.container {
     display: flex;
-    flex-direction: row;
-    gap: 5px;
-    align-self: flex-start;
-    justify-content: space-between; 
+ }
+.book {
+    position: relative;
+    margin-right: 51px;
+    display: inline-block;
+    border-radius: 10px;
+    width: 220px;
+    height: 300px;
+    background-color: whitesmoke;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    -webkit-transform: preserve-3d;
+    -ms-transform: preserve-3d;
+    transform: preserve-3d;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #000;
+    
   }
   
-  
-  .red {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #ff605c;
-    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
+  .cover {
+    top: 0;
+    position: absolute;
+    background-color: lightgray;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform-origin: 0;
+    -ms-transform-origin: 0;
+    transform-origin: 0;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
   
-  .yellow {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #ffbd44;
-    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
+  .book:hover .cover {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform: rotatey(-80deg);
+    -ms-transform: rotatey(-80deg);
+    transform: rotatey(-80deg);
   }
   
-  .green {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #00ca4e;
-    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
+  p {
+    font-size: 20px;
+    font-weight: bolder;
   }
-  
-  .card h1 {
-    text-align: center;
-    margin: 1.3rem;
-    color: rgb(218, 244, 237);
-    text-shadow: -10px 5px 10px rgba(0, 0, 0, 0.573);
-  }
-  
-  
